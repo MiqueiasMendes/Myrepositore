@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background</title>
+</head>
+<body>
+       <button onclick="change()">Clique aqui para mudar <br> o background da página</button>
+       <style>
+        button{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50,-50);
+            cursor: pointer;
+        }
+       </style>
+       <script>
+        function change() {
+      var botao = document.getElementById('colorButton');
+      var colors = ['blue', 'yellow', 'green', 'purple', 'red', 'orange', 'black'];
+      var index = 0;
+
+      botao.onclick = function() {
+        botao.style.backgroundColor = colors[++index % colors.length];
+      };
+    }
+
+    change();
+       </script>
+</body>
+</html>
